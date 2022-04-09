@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-color: #fafafa;
+    font-weight: 400;
+    margin: 0;
+}
+
+.nav {
+    font-family: 'Rubik', sans-serif;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #c84034;
+    color: #fdd400;
+    font-weight: 600;
+    width: 100%;
+    height: 100px;
+}
+
+.nav>.logo {
+    color: #fdd400;
+    display: block;
+    height: 70px;
+    width: 70px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+
+.nav .menu {
+    display: none;
+    letter-spacing: 0.2mm;
+    text-align: center;
+    position: fixed;
+    bottom: 100px;
+    width: inherit;
+}
+
+.menu a {
+    color: #fdd400;
+    text-decoration: none;
+    /* no underline */
+    text-decoration-thickness: 2px;
+    display: block;
+    margin: 5px 0 5px 0;
+}
+
+.menu a:hover {
+    color: #fafafa;
+
+}
+
+
+.maincont {
+    padding-top: 100px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    margin: 25px 25px 0 25px;
+    flex: 1 0 auto;
+}
+
+h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+}
+
+
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+    width: 100%;
+    font-size: small;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+
+.repsection {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    row-gap: 1em;
+}
+
+.repcard {
+    margin: 5px  0 5px 0;
+    padding:10px 30px 10px 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.repcard img {
+    max-height:100px;
+    max-width: 50%;
+    float: right;
+    border-radius: 100%;
+}
+.repcard .reptext {
+    display:flex;
+    margin-right: 10px;
+    align-items:center;
+    height:100px;
+}
+
+
+
+/* Responsiveness */
+
+@media screen and (min-width: 600px) {
+
+    .nav {
+        height: 100%;
+        width: 150px;
+        padding: 20px;
+        padding-top: 80px;
+    }
+
+    .main {
+        margin: 80px 80px 0 80px;
+    }
+
+    .nav .menu {
+        display: block;
+    }
+
+    .repsection {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+
+    .nav>.logo {
+        width: fit-content;
+        height: fit-content;
+        margin: 0;
+    }
+
+    .maincont {
+        padding-left: 170px;
+        padding-top: 0px;
+    }
+
+
+    @media screen and (min-width: 1000px) {
+        .nav {
+            width: 220px;
+            font-size: 17pt;
+        }
+
+        .nav {
+            padding: 40px;
+            padding-top: 80px;
+        }
+
+        .maincont {
+            padding-left: 300px;
+        }
+
+        
+    }
+
+    /*@media screen and (min-width: 1200px) {
+        .main {
+            margin-left: auto;
+            margin-right: auto;
+            flex: 1 0 auto;
+            max-width: 800px;
+        }
+    }*/
+}
